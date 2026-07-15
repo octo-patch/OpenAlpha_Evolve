@@ -157,6 +157,37 @@ OpenAlpha_Evolve employs a modular, agent-based architecture to orchestrate an e
     ```
     Add the necessary API key variables for your chosen LLM provider(s) to your `.env` file.
 
+    ##### MiniMax
+    MiniMax can be used through LiteLLM with either `MiniMax-M3` or `MiniMax-M2.7`. Choose exactly one profile below and add it to your `.env` file. The examples use `MiniMax-M3`; replace the model ID with `MiniMax-M2.7` to use the alternative model.
+
+    Global OpenAI-compatible API:
+    ```bash
+    OPENAI_API_KEY="your_minimax_api_key"
+    LITELLM_DEFAULT_MODEL="openai/MiniMax-M3"
+    LITELLM_DEFAULT_BASE_URL="https://api.minimax.io/v1"
+    ```
+
+    Mainland China OpenAI-compatible API:
+    ```bash
+    OPENAI_API_KEY="your_minimax_api_key"
+    LITELLM_DEFAULT_MODEL="openai/MiniMax-M3"
+    LITELLM_DEFAULT_BASE_URL="https://api.minimaxi.com/v1"
+    ```
+
+    Global Anthropic-compatible API:
+    ```bash
+    ANTHROPIC_API_KEY="your_minimax_api_key"
+    LITELLM_DEFAULT_MODEL="anthropic/MiniMax-M3"
+    LITELLM_DEFAULT_BASE_URL="https://api.minimax.io/anthropic"
+    ```
+
+    Mainland China Anthropic-compatible API:
+    ```bash
+    ANTHROPIC_API_KEY="your_minimax_api_key"
+    LITELLM_DEFAULT_MODEL="anthropic/MiniMax-M3"
+    LITELLM_DEFAULT_BASE_URL="https://api.minimaxi.com/anthropic"
+    ```
+
 6.  **Run OpenAlpha_Evolve!**
     Run the example task (Dijkstra's algorithm) with:
     ```bash
